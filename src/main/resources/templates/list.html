@@ -20,7 +20,8 @@
   <tr>
     <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
-    <!--Added "View All" link for the 'all' category-->
+    <!--Modified HTML to add "View All" link 'all' category in ListController-->
+    <!-- When clicked its calls the listJobsByColumnAndValue method in ListController with the params "column"  and "value" set to 'all'-->
     <td>
       <li>
         <a th:href="@{/list/jobs(column='all', value='All')}">View All</a>
