@@ -27,5 +27,24 @@
     </div>
 </div>
 
+<div th:fragment="search-results">
+    <table style="list-jobs">
+        <th:block th:each="job : ${jobs}">
+            <tr>
+                <td>
+                    <b>
+                        <span th:text="${'ID: ' + job.id}"></span><br />
+                        <span th:text="${'Name: ' + job.name}"></span><br />
+                        <span th:text="${'Employer: ' + job.employer}"></span><br />
+                        <span th:text="${'Location: ' + job.location}"></span><br />
+                        <span th:text="${'Position Type: ' + job.positionType}"></span><br />
+                        <span th:text="${'Skill: ' + job.coreCompetency}"></span><br />
+                    </b>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+
 </body>
 </html>

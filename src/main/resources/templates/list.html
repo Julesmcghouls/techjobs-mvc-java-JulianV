@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="~{fragments :: head}"></head>
+<head th:replace="fragments :: head"></head>
 
 <body>
 
-<div th:replace="~{fragments :: page-header}"></div>
+<div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
@@ -20,13 +20,7 @@
   <tr>
     <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
-    <!--Modified HTML to add "View All" link 'all' category in ListController-->
-    <!-- When clicked its calls the listJobsByColumnAndValue method in ListController with the params "column"  and "value" set to 'all'-->
-    <td>
-      <li>
-        <a th:href="@{/list/jobs(column='all', value='All')}">View All</a>
-      </li>
-    </td>
+    <!-- Feel free to remove or modify this element if necessary. -->
 
     <td th:each="category : ${tableChoices}">
       <ul>

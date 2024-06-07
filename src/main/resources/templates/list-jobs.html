@@ -1,45 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="~{fragments :: head}">
+<head th:replace="fragments :: head">
 </head>
 <body>
 
-<div th:replace="~{fragments :: page-header}"></div>
+<div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
 
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-  <!-- TODO #1 - Use a loop to display job results in a table. -->
-  <!-- Create a loop to display each job passed in from the ListController -->
-  <!-- Add a "job-listing" class to the table to apply the provided styling -->
-  <!-- Construct a table for each job, with one job field per row -->
-  <table th:each="job : ${jobs}" class="job-listing">
-    <tr>
-      <td>ID</td>
-      <td th:text="${job.id}"></td>
-    </tr>
-    <tr>
-      <td>Name</td>
-      <td th:text="${job.name}"></td>
-    </tr>
-    <tr>
-      <td>Employer</td>
-      <td th:text="${job.employer}"></td>
-    </tr>
-    <tr>
-      <td>Location</td>
-      <td th:text="${job.location}"></td>
-    </tr>
-    <tr>
-      <td>Position Type</td>
-      <td th:text="${job.positionType}"></td>
-    </tr>
-    <tr>
-      <td>Skill</td>
-      <td th:text="${job.coreCompetency}"></td>
-    </tr>
-  </table>
+  <div th:replace="fragments :: search-results"></div>
+
 </div>
 
 </body>
